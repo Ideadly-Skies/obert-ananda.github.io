@@ -3,9 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project Portfolio</title>
+    <link rel="stylesheet" href="../styles/portfolio.css">
 </head>
 <body>
-    Portfolioooooo
+    <!-- Navbar -->
+    <div class="menu-wrapper">
+        <nav>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg" alt="Tesla Logo" class="tesla-logo" />
+        <a href="../index.html">Home</a>
+        <ul>
+            <li><a href="./portfolio.html">Portfolio/Work</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </div>
+
+    <header>
+        <h1>Our Achievements</h1>
+        <p>Explore the gallery of our completed projects and successful endeavors.</p>
+    </header>
+
+    <section class="gallery">
+        <div class="gallery-item">
+            <div class="media">
+                <img src="project1.jpg" alt="Project 1">
+            </div>
+            <div class="caption">
+                <h3>Project 1</h3>
+                <p>Details about the first project and its achievement.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="media">
+                <video controls>
+                    <source src="project2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="caption">
+                <h3>Project 2</h3>
+                <p>Details about the second project and its achievement.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="media">
+                <img src="project3.jpg" alt="Project 3">
+            </div>
+            <div class="caption">
+                <h3>Project 3</h3>
+                <p>Details about the third project and its achievement.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="media">
+                <video controls>
+                    <source src="project4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="caption">
+                <h3>Project 4</h3>
+                <p>Details about the fourth project and its achievement.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="media">
+                <img src="project1.jpg" alt="Project 1">
+            </div>
+            <div class="caption">
+                <h3>Project 1</h3>
+                <p>Details about the first project and its achievement.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="media">
+                <video controls>
+                    <source src="project2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="caption">
+                <h3>Project 2</h3>
+                <p>Details about the second project and its achievement.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="media">
+                <img src="project3.jpg" alt="Project 3">
+            </div>
+            <div class="caption">
+                <h3>Project 3</h3>
+                <p>Details about the third project and its achievement.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="media">
+                <video controls>
+                    <source src="project4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="caption">
+                <h3>Project 4</h3>
+                <p>Details about the fourth project and its achievement.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="tesla-footer">
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="footer-copyright">
+                &copy; <span id="year"></span> Obie
+            </span>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
