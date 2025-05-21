@@ -22,23 +22,17 @@ body {
 
 .timeline {
   width: 30%;
-  height: 100%;
-  position: absolute;
+  height: 100vh; /* Use viewport height instead of 100% */
+  position: fixed; /* Changed from absolute to fixed */
   padding: auto;
-  z-index: -1;
-  justify-items: center;
-  align-items: center;
+  z-index: 1; /* Changed from -1 */
+  overflow-y: auto; /* Enable vertical scrolling */
   overflow-x: hidden;
-  /*   overflow: scroll; */
   text-align: center;
-
   top: 0;
   left: 0;
-
   background-color: white;
   font-family: "Montserrat", sans-serif;
-
-  flex-direction: column;
 }
 
 .timeline::after {
@@ -290,23 +284,13 @@ h1 {
 .timeline-small {
   width: 100%;
   margin-top: 900px;
-  position: absolute;
-  /*   padding: auto; */
-  z-index: -1;
-  justify-items: center;
-  align-items: center;
-  overflow-x: hidden;
-  overflow: hidden;
-  /*   overflow: scroll; */
+  position: relative; /* Changed from absolute */
+  z-index: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
   text-align: center;
-
-  top: 0;
-  left: 0;
-
   background-color: white;
   font-family: "Montserrat", sans-serif;
-
-  flex-direction: column;
+  padding-bottom: 50px; /* Add some padding at bottom */
 }
 
 .timeline-small::after {
