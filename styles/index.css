@@ -485,3 +485,9 @@ h1 {
     margin-bottom: 10px;
   }
 }
+
+#big, #small, .main-content, .main-content-small, .timeline, .timeline-small {
+  padding-top: 70px;    /* 56px navbar + extra space */
+  padding-bottom: 70px; /* 56px footer + extra space */
+  box-sizing: border-box;
+}

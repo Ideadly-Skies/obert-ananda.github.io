@@ -9,7 +9,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    padding: 20px;
+    padding: 76px 20px 76px 20px; /* top and bottom padding for navbar/footer */
+    /* 76px = 56px (navbar) + 20px extra space, adjust as needed */
 }
 
 /* Header styles */
