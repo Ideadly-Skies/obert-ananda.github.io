@@ -50,7 +50,7 @@ body {
 }
 
 .timeline::after {
-  height: 3300px;
+  height: 5700px;
   content: "";
   position: absolute;
   width: 6px;
