@@ -50,7 +50,7 @@ body {
 }
 
 .timeline::after {
-  height: 5700px;
+  height: 6000px;
   content: "";
   position: absolute;
   width: 6px;
@@ -122,15 +122,16 @@ body {
 }
 
 .main-content {
-  height: 100%;
+  height: 100vh;
   width: 70%;
   position: absolute;
   z-index: 1;
   top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
   right: 0;
   background-color: #00203fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bio {
@@ -194,6 +195,12 @@ h1 {
   text-transform: uppercase;
   transition: all 0.2s;
   box-sizing: border-box;
+}
+
+#tribute-link:hover,
+#tribute-link:focus {
+  box-shadow: 0 0 0 4px #e74c3c44, 0 4px 16px rgba(44,83,100,0.12);
+  outline: none;
 }
 
 .centered-element {
@@ -297,6 +304,12 @@ h1 {
   transition: all 0.2s;
   box-sizing: border-box;
   z-index: 2; /* Add this to ensure it's above other elements */
+}
+
+#tribute-link-small:hover,
+#tribute-link-small:focus {
+  box-shadow: 0 0 0 4px #e74c3c44, 0 4px 16px rgba(44,83,100,0.12);
+  outline: none;
 }
 
 .timeline-small {
@@ -484,6 +497,81 @@ h1 {
   .footer-links {
     margin-bottom: 10px;
   }
+}
+
+/* Prevent unwanted vertical scroll */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Bio fade animation */
+.bio-fade {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.7s;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bio-fade.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* Bio row layouts */
+.bio-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: 40px 32px;
+  background: transparent;
+  border-radius: 18px;
+}
+.bio-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Bio image and info */
+.bio-img {
+  text-align: center;
+}
+.bio-title {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.img-caption {
+  font-size: 1.1rem;
+  margin-top: 18px;
+  color: #fff;
+}
+.bio-info {
+  max-width: 400px;
+}
+.bio-link {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 28px;
+  background: #e74c3c;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+.bio-link:hover, .bio-link:focus {
+  box-shadow: 0 0 0 4px #e74c3c44, 0 4px 16px rgba(44,83,100,0.12);
+  background: #fff;
+  color: #e74c3c;
+  outline: none;
 }
 
 #big, #small, .main-content, .main-content-small, .timeline, .timeline-small {
