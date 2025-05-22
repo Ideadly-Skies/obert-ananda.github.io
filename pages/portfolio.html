@@ -207,6 +207,20 @@
       </div>
     </section>
 
+    <!-- Refreshment Section: Penalty Shootout Game -->
+    <section class="refreshment-section">
+      <h2 class="refreshment-heading">Refreshment: Penalty Shootout Game</h2>
+      <div class="penalty-game">
+        <div class="goal">
+          <div class="goalkeeper" id="goalkeeper"></div>
+          <button class="shoot-btn" data-direction="left">Left</button>
+          <button class="shoot-btn" data-direction="center">Center</button>
+          <button class="shoot-btn" data-direction="right">Right</button>
+        </div>
+        <div class="result" id="result"></div>
+      </div>
+    </section>
+
     <footer class="tesla-footer">
         <div class="footer-content">
             <ul class="footer-links">
@@ -241,6 +255,33 @@ prevBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
     current = (current + 1) % items.length;
     showItem(current);
+});
+</script>
+<script>
+const keeper = document.getElementById('goalkeeper');
+const result = document.getElementById('result');
+const directions = ['left', 'center', 'right'];
+const positions = {
+    left: '20%',
+    center: '50%',
+    right: '80%'
+};
+
+document.querySelectorAll('.shoot-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Randomly choose where the keeper dives
+        const keeperDive = directions[Math.floor(Math.random() * 3)];
+        const playerShot = btn.getAttribute('data-direction');
+        keeper.style.left = positions[keeperDive];
+
+        if (keeperDive === playerShot) {
+            result.textContent = "Saved! The goalkeeper guessed right!";
+            result.style.color = "#e74c3c";
+        } else {
+            result.textContent = "Goal! You scored!";
+            result.style.color = "#27ae60";
+        }
+    });
 });
 </script>
 </body>
