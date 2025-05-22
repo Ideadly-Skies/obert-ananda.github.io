@@ -293,19 +293,22 @@ header p {
 /* Recommendation Carousel */
 .recommendation-carousel {
     margin: 60px auto 40px auto;
-    max-width: 700px;
+    width: 100%;
+    max-width: none;
     text-align: center;
+    padding: 0 10px;
 }
 
 .recommendation-carousel h2 {
     font-size: 2rem;
-    color: #2c5364;
+    color: #000;
     margin-bottom: 24px;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
 }
 
 .carousel-container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -333,17 +336,19 @@ header p {
 .carousel-track {
     overflow: hidden;
     width: 100%;
-    max-width: 500px;
     min-height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    max-width: none;
 }
 
 .carousel-item {
     display: none;
     width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
     padding: 24px 18px;
     background: #fff;
     border-radius: 8px;
@@ -351,14 +356,15 @@ header p {
     font-size: 1.1rem;
     color: #333;
     transition: opacity 0.3s;
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
+    opacity: 0;
+    z-index: 1;
 }
 
 .carousel-item.active {
     display: block;
-    position: relative;
     opacity: 1;
     z-index: 2;
 }
@@ -409,7 +415,7 @@ header p {
     margin-top: 48px;
     margin-bottom: 18px;
     font-size: 1.5rem;
-    color: #2c5364;
+    color: #000;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
 }
@@ -476,4 +482,14 @@ header p {
         width: 40px;
         height: 40px;
     }
+}
+
+/* Achievements Section */
+.achievements-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin: 32px 0 24px 0;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
 }
