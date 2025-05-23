@@ -574,8 +574,23 @@ html, body {
   outline: none;
 }
 
+#bio2 .bio-link {
+  background: #034694;
+  color: #fff;
+}
+#bio2 .bio-link:hover,
+#bio2 .bio-link:focus {
+  background: #fff;
+  color: #034694;
+  box-shadow: 0 0 0 4px #03469444, 0 4px 16px rgba(44,83,100,0.12);
+}
+
 #big, #small, .main-content, .main-content-small, .timeline, .timeline-small {
   padding-top: 70px;    /* 56px navbar + extra space */
   padding-bottom: 70px; /* 56px footer + extra space */
   box-sizing: border-box;
+}
+
+#bio4 .bio-title {
+  color: #111;
 }
