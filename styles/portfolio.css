@@ -237,9 +237,13 @@ header p {
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+  transition: background 0.7s cubic-bezier(.4,2,.6,1);
 }
 
 .hero-eden-content {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
     display: flex;
     align-items: center;
     max-width: 900px;
@@ -248,18 +252,37 @@ header p {
     flex-wrap: wrap;
 }
 
+.hero-eden-slide {
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s cubic-bezier(.4,2,.6,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.hero-eden-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+
 .hero-eden-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    background: #fff;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  background: #fff;
 }
 
 .hero-eden-text {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .hero-eden-text h2 {
@@ -275,19 +298,46 @@ header p {
     color: #e0e0e0;
 }
 
+/* Remove shadows and edges from .hero-eden-slide and .hero-eden-content */
+.hero-eden-content,
+.hero-eden-slide {
+  background: inherit !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Make the paragraph text thicker and more readable */
+.hero-eden-slide .hero-eden-text p {
+  color: #111 !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 1.08em;
+}
+
+.hero-eden-slide .hero-eden-text p {
+  color: #111 !important;
+}
+
+.hero-eden-content,
+.hero-eden-slide {
+  background: none !important;
+  /* Optional: add a subtle shadow for contrast */
+  /* box-shadow: 0 4px 24px rgba(0,0,0,0.10); */
+}
+
 @media (max-width: 700px) {
-    .hero-eden-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-    }
-    .hero-eden-img {
-        width: 120px;
-        height: 120px;
-    }
-    .hero-eden-text h2 {
-        font-size: 1.5rem;
-    }
+  .hero-eden-content, .hero-eden-slide {
+    flex-direction: column;
+    gap: 18px;
+    min-height: 320px;
+  }
+  .hero-eden-img {
+    width: 120px;
+    height: 120px;
+  }
+  .hero-eden-text h2 {
+    font-size: 1.5rem;
+  }
 }
 
 /* Recommendation Carousel */
@@ -568,4 +618,48 @@ header p {
     color: #2c5364;
     min-height: 32px;
     margin-top: 8px;
+}
+
+/* Add to your portfolio.css */
+.fifa-silver {
+  background: linear-gradient(90deg, #bfc1c2 0%, #e6e7e8 100%);
+}
+.fifa-gold {
+  background: linear-gradient(90deg, #f7d774 0%, #fff3b0 100%);
+}
+.fifa-rare-gold {
+  background: linear-gradient(90deg, #f7d774 0%, #ffe066 100%);
+  box-shadow: 0 0 24px 4px #f7d77444;
+}
+.fifa-special {
+  background: linear-gradient(90deg, #5a5aff 0%, #b8b8ff 100%);
+}
+.fifa-bronze {
+  background: linear-gradient(90deg, #a97142 0%, #e0c3a3 100%);
+}
+.fifa-blue {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+}
+
+/* Override the default hero-eden background when a card class is present */
+.hero-eden.fifa-silver {
+  background: linear-gradient(90deg, #bfc1c2 0%, #e6e7e8 100%) !important;
+  color: #222;
+}
+.hero-eden.fifa-gold,
+.hero-eden.fifa-rare-gold {
+  background: linear-gradient(90deg, #f7d774 0%, #fff3b0 100%) !important;
+  color: #222;
+}
+.hero-eden.fifa-bronze {
+  background: linear-gradient(90deg, #a97142 0%, #e0c3a3 100%) !important;
+  color: #222;
+}
+.hero-eden.fifa-blue {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%) !important;
+  color: #fff;
+}
+.hero-eden.fifa-special {
+  background: linear-gradient(90deg, #5a5aff 0%, #b8b8ff 100%) !important;
+  color: #fff;
 }

@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Portfolio</title>
     <link rel="stylesheet" href="../styles/portfolio.css">
+    <style>
+      .hero-eden {
+  transition: background 0.7s cubic-bezier(.4,2,.6,1);
+}
+
+/* Override the default hero-eden background when a card class is present */
+.hero-eden.fifa-silver {
+  background: linear-gradient(90deg, #bfc1c2 0%, #e6e7e8 100%) !important;
+  color: #222;
+}
+.hero-eden.fifa-gold,
+.hero-eden.fifa-rare-gold {
+  background: linear-gradient(90deg, #f7d774 0%, #fff3b0 100%) !important;
+  color: #222;
+}
+.hero-eden.fifa-bronze {
+  background: linear-gradient(90deg, #a97142 0%, #e0c3a3 100%) !important;
+  color: #222;
+}
+.hero-eden.fifa-blue {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%) !important;
+  color: #fff;
+}
+.hero-eden.fifa-special {
+  background: linear-gradient(90deg, #5a5aff 0%, #b8b8ff 100%) !important;
+  color: #fff;
+}
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -26,16 +54,128 @@
 
     <!-- Hero Section for Eden Hazard -->
     <section class="hero-eden">
-        <div class="hero-eden-content">
-            <img class="hero-eden-img" src="https://media.contentapi.ea.com/content/www-easports/en_AU/fifa/ultimate-team/news/2014/fut-eden-hazard-ultimate-xi/_jcr_content/par/image.img.jpg" alt="Eden Hazard in action">
-            <div class="hero-eden-text">
-                <h2>95 RATED ON FIFA 15 ★</h2>
-                <p>
-                    Belgian professional footballer renowned for his creativity, speed, and technical ability. 
-                    Hazard has starred for Lille, Chelsea, Real Madrid, and the Belgian national team, earning numerous individual and team honors throughout his illustrious career.
-                </p>
-            </div>
+      <div class="hero-eden-content">
+        <!-- All hero slides -->
+        <div class="hero-eden-slide active fifa-silver">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p230949.png" alt="FIFA 09 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 09: 73 Rated</h2>
+            <p>Hazard's first FIFA Ultimate Team card as a Lille youngster, showing early promise with a silver card.</p>
+          </div>
         </div>
+        <div class="hero-eden-slide fifa-silver">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p230949.png" alt="FIFA 10 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 10: 77 Rated</h2>
+            <p>Hazard's rating rises as he impresses in Ligue 1, becoming a top young talent in France.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 11 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 11: 80 Rated</h2>
+            <p>Now a gold card, Hazard is recognized as one of Ligue 1's brightest stars.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 12 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 12: 85 Rated</h2>
+            <p>After a stellar season at Lille, Hazard's rating jumps, reflecting his status as a top European prospect.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 13 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 13: 85 Rated</h2>
+            <p>Hazard joins Chelsea and maintains his high rating, quickly becoming a Premier League star.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-rare-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 14 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 14: 88 Rated</h2>
+            <p>Hazard's performances at Chelsea see his rating soar, establishing him among the world's elite.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-rare-gold">
+          <img class="hero-eden-img" src="https://media.contentapi.ea.com/content/www-easports/en_AU/fifa/ultimate-team/news/2014/fut-eden-hazard-ultimate-xi/_jcr_content/par/image.img.jpg" alt="FIFA 15 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 15: 89 Rated</h2>
+            <p>After a title-winning season, Hazard is one of the highest-rated wingers in the game.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-rare-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 16 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 16: 89 Rated</h2>
+            <p>Hazard remains a top pick for FUT players, known for his dribbling and pace.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-rare-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 17 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 17: 88 Rated</h2>
+            <p>Despite a dip in Chelsea's form, Hazard stays among the best in the Premier League.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-rare-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 18 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 18: 90 Rated</h2>
+            <p>Hazard's World Cup heroics and Chelsea performances earn him a 90 rating.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-rare-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 19 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 19: 91 Rated</h2>
+            <p>Hazard's final Chelsea season is rewarded with his highest ever base rating.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-rare-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 20 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 20: 91 Rated</h2>
+            <p>Hazard joins Real Madrid, keeping his elite status in FIFA.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-rare-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 21 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 21: 88 Rated</h2>
+            <p>Injuries affect his rating, but Hazard remains a top player in the game.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-rare-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 22 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 22: 85 Rated</h2>
+            <p>Hazard's rating drops as injuries limit his Real Madrid impact.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 23 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 23: 84 Rated</h2>
+            <p>Hazard's final Real Madrid season sees his lowest rating since his early years.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 24 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 24: 80 Rated</h2>
+            <p>After leaving Real Madrid, Hazard's rating reflects his career winding down.</p>
+          </div>
+        </div>
+        <div class="hero-eden-slide fifa-gold">
+          <img class="hero-eden-img" src="https://cdn.futbin.com/content/fifa23/img/players/p183277.png" alt="FIFA 25 Eden Hazard">
+          <div class="hero-eden-text">
+            <h2>FIFA 25: 75 Rated</h2>
+            <p>Hazard's legacy remains, but his rating marks the end of an era in FIFA games.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Achievements Heading -->
@@ -283,6 +423,41 @@ document.querySelectorAll('.shoot-btn').forEach(btn => {
         }
     });
 });
+</script>
+<script>
+const heroSlides = document.querySelectorAll('.hero-eden-slide');
+const heroEdenSection = document.querySelector('.hero-eden');
+let heroIdx = 0;
+
+// Helper: Get the card color class from the current slide
+function getCardClass(slide) {
+  if (slide.classList.contains('fifa-silver')) return 'fifa-silver';
+  if (slide.classList.contains('fifa-gold')) return 'fifa-gold';
+  if (slide.classList.contains('fifa-rare-gold')) return 'fifa-rare-gold';
+  if (slide.classList.contains('fifa-bronze')) return 'fifa-bronze';
+  if (slide.classList.contains('fifa-blue')) return 'fifa-blue';
+  if (slide.classList.contains('fifa-special')) return 'fifa-special';
+  return '';
+}
+
+function updateHeroEdenBg() {
+  // Remove all card color classes from hero-eden
+  heroEdenSection.classList.remove('fifa-silver', 'fifa-gold', 'fifa-rare-gold', 'fifa-bronze', 'fifa-blue', 'fifa-special');
+  // Add the current slide's card color class
+  const cardClass = getCardClass(heroSlides[heroIdx]);
+  if (cardClass) heroEdenSection.classList.add(cardClass);
+}
+
+function showNextHeroSlide() {
+  heroSlides[heroIdx].classList.remove('active');
+  heroIdx = (heroIdx + 1) % heroSlides.length;
+  heroSlides[heroIdx].classList.add('active');
+  updateHeroEdenBg();
+}
+setInterval(showNextHeroSlide, 3500); // Change slide every 3.5 seconds
+
+// Set initial background on load
+updateHeroEdenBg();
 </script>
 </body>
 </html>
