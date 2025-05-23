@@ -6,32 +6,32 @@
     <title>Project Portfolio</title>
     <link rel="stylesheet" href="../styles/portfolio.css">
     <style>
-      .hero-eden {
-  transition: background 0.7s cubic-bezier(.4,2,.6,1);
-}
+        .hero-eden {
+            transition: background 0.7s cubic-bezier(.4,2,.6,1);
+        }
 
-/* Override the default hero-eden background when a card class is present */
-.hero-eden.fifa-silver {
-  background: linear-gradient(90deg, #bfc1c2 0%, #e6e7e8 100%) !important;
-  color: #222;
-}
-.hero-eden.fifa-gold,
-.hero-eden.fifa-rare-gold {
-  background: linear-gradient(90deg, #f7d774 0%, #fff3b0 100%) !important;
-  color: #222;
-}
-.hero-eden.fifa-bronze {
-  background: linear-gradient(90deg, #a97142 0%, #e0c3a3 100%) !important;
-  color: #222;
-}
-.hero-eden.fifa-blue {
-  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%) !important;
-  color: #fff;
-}
-.hero-eden.fifa-special {
-  background: linear-gradient(90deg, #5a5aff 0%, #b8b8ff 100%) !important;
-  color: #fff;
-}
+        /* Override the default hero-eden background when a card class is present */
+        .hero-eden.fifa-silver {
+            background: linear-gradient(90deg, #bfc1c2 0%, #e6e7e8 100%) !important;
+            color: #222;
+        }
+        .hero-eden.fifa-gold,
+        .hero-eden.fifa-rare-gold {
+            background: linear-gradient(90deg, #f7d774 0%, #fff3b0 100%) !important;
+            color: #222;
+        }
+        .hero-eden.fifa-bronze {
+            background: linear-gradient(90deg, #a97142 0%, #e0c3a3 100%) !important;
+            color: #222;
+        }
+        .hero-eden.fifa-blue {
+            background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%) !important;
+            color: #fff;
+        }
+        .hero-eden.fifa-special {
+            background: linear-gradient(90deg, #5a5aff 0%, #b8b8ff 100%) !important;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -238,78 +238,88 @@
 
     <!-- Carousel: Recommendations -->
     <section class="recommendation-carousel">
-      <h2>What His Teammates Say</h2>
-      <div class="carousel-container">
-        <button class="carousel-btn prev" aria-label="Previous">&lt;</button>
-        <div class="carousel-track">
-          <div class="carousel-item active">
-            <img class="carousel-avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg_Hee6ipCAvSvnuP-9Gf4HAIPRpvwBMXc_w&s" alt="Frank Lampard">
-            <p class="quote">"Eden is one of the best players I've ever played with. He can win a game on his own." <br><span>- Frank Lampard (Chelsea Legend)</span></p>
-          </div>
-          <div class="carousel-item">
-            <img class="carousel-avatar" src="https://e0.365dm.com/22/05/2048x1152/skysports-cesar-azpilicueta_5767547.jpg?20220510191413" alt="César Azpilicueta">
-            <p class="quote">"He's a magician with the ball. He makes football look easy." <br><span>- César Azpilicueta (Chelsea Captain)</span></p>
-          </div>
-          <div class="carousel-item">
-            <img class="carousel-avatar" src="https://images2.minutemediacdn.com/image/upload/c_crop,w_4324,h_2432,x_1112,y_46/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/si/01jvm69vkmj4d8nefp0y.jpg" alt="Luka Modrić">
-            <p class="quote">"Hazard is a world-class player. He's got everything: pace, skill, and intelligence." <br><span>- Luka Modrić (Real Madrid)</span></p>
-          </div>
-          <div class="carousel-item">
-            <img class="carousel-avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/RealM-Shahter15_%287%29.jpg/250px-RealM-Shahter15_%287%29.jpg" alt="Marcelo">
-            <p class="quote">"He's a joy to watch and a nightmare to defend against." <br><span>- Marcelo (Real Madrid)</span></p>
-          </div>
+    <h2>What His Teammates Say</h2>
+    <div class="carousel-content">
+        <div class="carousel-slide active">
+        <img class="carousel-avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg_Hee6ipCAvSvnuP-9Gf4HAIPRpvwBMXc_w&s" alt="Frank Lampard">
+        <blockquote>
+            "Eden is one of the best players I've ever played with. He can win a game on his own."
+            <span>- Frank Lampard (Chelsea Legend)</span>
+        </blockquote>
         </div>
-        <button class="carousel-btn next" aria-label="Next">&gt;</button>
-      </div>
+        <div class="carousel-slide">
+        <img class="carousel-avatar" src="https://e0.365dm.com/22/05/2048x1152/skysports-cesar-azpilicueta_5767547.jpg?20220510191413" alt="César Azpilicueta">
+        <blockquote>
+            "He's a magician with the ball. He makes football look easy."
+            <span>- César Azpilicueta (Chelsea Captain)</span>
+        </blockquote>
+        </div>
+        <div class="carousel-slide">
+        <img class="carousel-avatar" src="https://images2.minutemediacdn.com/image/upload/c_crop,w_4324,h_2432,x_1112,y_46/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/si/01jvm69vkmj4d8nefp0y.jpg" alt="Luka Modrić">
+        <blockquote>
+            "Hazard is a world-class player. He's got everything: pace, skill, and intelligence."
+            <span>- Luka Modrić (Real Madrid)</span>
+        </blockquote>
+        </div>
+        <div class="carousel-slide">
+        <img class="carousel-avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/RealM-Shahter15_%287%29.jpg/250px-RealM-Shahter15_%287%29.jpg" alt="Marcelo">
+        <blockquote>
+            "He's a joy to watch and a nightmare to defend against."
+            <span>- Marcelo (Real Madrid)</span>
+        </blockquote>
+        </div>
+    </div>
+    </section>
 
-      <!-- Trophy Cabinet -->
-      <h3 class="trophy-cabinet-title">Trophy Cabinet</h3>
-      <div class="trophy-cabinet">
-        <div class="trophy-item">
-          <img src="https://c8.alamy.com/comp/TAM1P1/close-up-of-the-sky-bet-league-one-play-off-final-trophy-before-the-sky-bet-league-one-play-off-final-at-wembley-stadium-london-TAM1P1.jpg" alt="Ligue 1 Trophy">
-          <span>Ligue 1<br><small>2010/11</small></span>
+    <!-- Trophy Cabinet -->
+    <section>
+        <h3 class="trophy-cabinet-title" style="text-align:center;">Trophy Cabinet</h3>
+        <div class="trophy-cabinet" style="display:flex; flex-wrap:wrap; justify-content:center; gap:24px;">
+            <div class="trophy-item" style="text-align:center;">
+                <img src="https://c8.alamy.com/comp/TAM1P1/close-up-of-the-sky-bet-league-one-play-off-final-trophy-before-the-sky-bet-league-one-play-off-final-at-wembley-stadium-london-TAM1P1.jpg" alt="Ligue 1 Trophy">
+                <span>Ligue 1<br><small>2010/11</small></span>
+            </div>
+            <div class="trophy-item" style="text-align:center;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQEdf7gJQ7lcFxp9OJ_lxftrniXGIwVPI-Ww&s" alt="Coupe de France">
+                <span>Coupe de France<br><small>2010/11</small></span>
+            </div>
+            <div class="trophy-item" style="text-align:center;">
+                <img src="https://i2-prod.liverpool.com/incoming/article31497044.ece/ALTERNATES/s1200b/0_GettyImages-1411837383.jpg" alt="Premier League">
+                <span>Premier League<br><small>2014/15, 2016/17</small></span>
+            </div>
+            <div class="trophy-item" style="text-align:center;">
+                <img src="https://m.media-amazon.com/images/I/71EabFCd7AL.jpg" alt="FA Cup">
+                <span>FA Cup<br><small>2017/18</small></span>
+            </div>
+            <div class="trophy-item" style="text-align:center;">
+                <img src="https://i.namu.wiki/i/Hr1BBmoitsf_MMoK-0uyY3ewrfoX4na3iciOTrvNKtjd73fpL2v-Aj3b-hAmqJj-8P3j3fCmVCH53WLiXwOq1Q.webp" alt="EFL Cup">
+                <span>EFL Cup<br><small>2014/15</small></span>
+            </div>
+            <div class="trophy-item" style="text-align:center;">
+                <img src="https://m.media-amazon.com/images/I/51LS5adSCJL.jpg" alt="Europa League">
+                <span>Europa League<br><small>2012/13, 2018/19</small></span>
+            </div>
+            <div class="trophy-item">
+                <img src="https://m.media-amazon.com/images/I/51A4N5HYxyL._AC_UF894,1000_QL80_.jpg" alt="La Liga">
+                <span>La Liga<br><small>2019/20, 2021/22</small></span>
+            </div>
+            <div class="trophy-item">
+                <img src="https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2024-01/nba-plain--837d9a8a-5a88-4bea-9e9c-bdff244fe8cf.png?h=920929c4&itok=2K-Kcd-Z" alt="Supercopa de Espana">
+                <span>Supercopa de España<br><small>2019/20, 2021/22</small></span>
+            </div>
+            <div class="trophy-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/2015_UEFA_Super_Cup_54_%28cropped%29.jpg/250px-2015_UEFA_Super_Cup_54_%28cropped%29.jpg" alt="UEFA Super Cup">
+                <span>UEFA Super Cup<br><small>2022</small></span>
+            </div>
+            <div class="trophy-item">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/670415d038f0bde5bcb84249/The-FIFA-Club-World-Cup-trophy-/0x0.jpg?format=jpg&crop=1419,945,x0,y0,safe&width=960" alt="FIFA Club World Cup">
+                <span>FIFA Club World Cup<br><small>2022</small></span>
+            </div>
+            <div class="trophy-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/FIFA_World_Cup_Trophy_cropped.jpg" alt="World Cup Bronze">
+                <span>World Cup Bronze<br><small>2018</small></span>
+            </div>
         </div>
-        <div class="trophy-item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQEdf7gJQ7lcFxp9OJ_lxftrniXGIwVPI-Ww&s" alt="Coupe de France">
-          <span>Coupe de France<br><small>2010/11</small></span>
-        </div>
-        <div class="trophy-item">
-          <img src="https://i2-prod.liverpool.com/incoming/article31497044.ece/ALTERNATES/s1200b/0_GettyImages-1411837383.jpg" alt="Premier League">
-          <span>Premier League<br><small>2014/15, 2016/17</small></span>
-        </div>
-        <div class="trophy-item">
-          <img src="https://m.media-amazon.com/images/I/71EabFCd7AL.jpg" alt="FA Cup">
-          <span>FA Cup<br><small>2017/18</small></span>
-        </div>
-        <div class="trophy-item">
-          <img src="https://i.namu.wiki/i/Hr1BBmoitsf_MMoK-0uyY3ewrfoX4na3iciOTrvNKtjd73fpL2v-Aj3b-hAmqJj-8P3j3fCmVCH53WLiXwOq1Q.webp" alt="EFL Cup">
-          <span>EFL Cup<br><small>2014/15</small></span>
-        </div>
-        <div class="trophy-item">
-          <img src="https://m.media-amazon.com/images/I/51LS5adSCJL.jpg" alt="Europa League">
-          <span>Europa League<br><small>2012/13, 2018/19</small></span>
-        </div>
-        <div class="trophy-item">
-          <img src="https://m.media-amazon.com/images/I/51A4N5HYxyL._AC_UF894,1000_QL80_.jpg" alt="La Liga">
-          <span>La Liga<br><small>2019/20, 2021/22</small></span>
-        </div>
-        <div class="trophy-item">
-          <img src="https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2024-01/nba-plain--837d9a8a-5a88-4bea-9e9c-bdff244fe8cf.png?h=920929c4&itok=2K-Kcd-Z" alt="Supercopa de Espana">
-          <span>Supercopa de España<br><small>2019/20, 2021/22</small></span>
-        </div>
-        <div class="trophy-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/2015_UEFA_Super_Cup_54_%28cropped%29.jpg/250px-2015_UEFA_Super_Cup_54_%28cropped%29.jpg" alt="UEFA Super Cup">
-          <span>UEFA Super Cup<br><small>2022</small></span>
-        </div>
-        <div class="trophy-item">
-          <img src="https://imageio.forbes.com/specials-images/imageserve/670415d038f0bde5bcb84249/The-FIFA-Club-World-Cup-trophy-/0x0.jpg?format=jpg&crop=1419,945,x0,y0,safe&width=960" alt="FIFA Club World Cup">
-          <span>FIFA Club World Cup<br><small>2022</small></span>
-        </div>
-        <div class="trophy-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/FIFA_World_Cup_Trophy_cropped.jpg" alt="World Cup Bronze">
-          <span>World Cup Bronze<br><small>2018</small></span>
-        </div>
-      </div>
     </section>
 
     <!-- Refreshment Section: Penalty Shootout Game -->
@@ -423,6 +433,16 @@ setInterval(showNextHeroSlide, 3500); // Change slide every 3.5 seconds
 
 // Set initial background on load
 updateHeroEdenBg();
+</script>
+<script>
+const carouselSlides = document.querySelectorAll('.carousel-content .carousel-slide');
+let carouselIdx = 0;
+function showNextCarouselSlide() {
+  carouselSlides[carouselIdx].classList.remove('active');
+  carouselIdx = (carouselIdx + 1) % carouselSlides.length;
+  carouselSlides[carouselIdx].classList.add('active');
+}
+setInterval(showNextCarouselSlide, 4000); // Change slide every 4 seconds
 </script>
 </body>
 </html>
