@@ -1,0 +1,649 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 76px 20px 76px 20px; /* top and bottom padding for navbar/footer */
+    /* 76px = 56px (navbar) + 20px extra space, adjust as needed */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px; /* Increased space below the header */
+}
+
+header h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 18px; /* Add this line for spacing */
+}
+
+header p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.media {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.media img,
+.media video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Change from cover to contain */
+    background: #f4f4f4; /* Optional: adds a background if image doesn't fill the box */
+}
+
+.caption {
+    padding: 20px;
+}
+
+.caption h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.caption p {
+    font-size: 16px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
+
+/* navbar */
+/* Navbar Styles */
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 1000;
+  padding: 0;
+}
+
+.menu-wrapper nav {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the navbar content horizontally */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tesla-logo {
+  height: 36px;
+  margin-left: 24px;
+  margin-right: 32px;
+  filter: brightness(0) invert(1); /* makes logo white if SVG is black */
+}
+
+.menu-wrapper ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 32px;
+  height: 56px;
+}
+
+.menu-wrapper li {
+  margin-left: 32px;
+}
+
+.menu-wrapper li:first-child {
+  margin-left: 0;
+}
+
+.menu-wrapper a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-wrapper a:hover,
+.menu-wrapper a:focus {
+  background: #e74c3c;
+  color: #fff;
+  outline: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 734px) {
+  .menu-wrapper {
+    display: none;
+  }
+}
+
+.tesla-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  border-top: 1px solid #222;
+  z-index: 1001;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-right: 32px;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  background: #e74c3c;
+  color: #fff;
+  outline: none;
+}
+
+@media (max-width: 734px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+  .footer-links {
+    margin-bottom: 10px;
+  }
+}
+
+/* Hero Section - Eden */
+.hero-eden {
+    background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
+    color: #fff;
+    padding: 48px 0 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  transition: background 0.7s cubic-bezier(.4,2,.6,1);
+}
+
+.hero-eden-content {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.hero-eden-slide {
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s cubic-bezier(.4,2,.6,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.hero-eden-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eden-img {
+  width: 200px;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 18px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  display: block;
+}
+
+.hero-eden-text {
+  max-width: 600px;
+}
+
+.hero-eden-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.hero-eden-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Remove shadows and edges from .hero-eden-slide and .hero-eden-content */
+.hero-eden-content,
+.hero-eden-slide {
+  background: inherit !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Make the paragraph text thicker and more readable */
+.hero-eden-slide .hero-eden-text p {
+  color: #111 !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 1.08em;
+}
+
+.hero-eden-slide .hero-eden-text p {
+  color: #111 !important;
+}
+
+.hero-eden-content,
+.hero-eden-slide {
+  background: none !important;
+  /* Optional: add a subtle shadow for contrast */
+  /* box-shadow: 0 4px 24px rgba(0,0,0,0.10); */
+}
+
+@media (max-width: 700px) {
+  .hero-eden-content, .hero-eden-slide {
+    flex-direction: column;
+    gap: 18px;
+    min-height: 320px;
+  }
+  .hero-eden-img {
+    width: 120px;
+    height: 170px;
+  }
+  .hero-eden-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Recommendation Carousel */
+.recommendation-carousel {
+  width: 100%;
+  margin-left: 0;
+  transform: none;
+  padding: 48px 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.7s cubic-bezier(.4,2,.6,1);
+  /* Remove max-width and text-align */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.recommendation-carousel h2 {
+  font-size: 2rem;
+  color: #00203fff;
+  margin-bottom: 24px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  background: transparent;
+}
+
+.carousel-content {
+  position: relative;
+  min-height: 220px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-slide {
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s cubic-bezier(.4,2,.6,1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 18px;
+  border: 3px solid #e74c3c;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.carousel-slide blockquote {
+  font-size: 1.15rem;
+  color: #222;
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 24px 20px 18px 20px;
+  margin: 0;
+  font-style: italic;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  position: relative;
+  max-width: 420px;
+}
+
+.carousel-slide blockquote span {
+  display: block;
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #185a9d;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+    .recommendation-carousel {
+        margin: 40px 0 20px 0;
+        max-width: 98vw;
+    }
+    .carousel-track {
+        max-width: 98vw;
+    }
+    .carousel-item {
+        font-size: 1rem;
+        padding: 18px 6px;
+    }
+}
+
+/* Trophy Cabinet Styles */
+.trophy-cabinet-title {
+    margin-top: 48px;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.trophy-cabinet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px 36px;
+    margin-bottom: 32px;
+}
+
+.trophy-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 8px 10px 8px;
+    box-shadow: 0 2px 10px rgba(44,83,100,0.07);
+}
+
+.trophy-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+    will-change: transform;
+}
+
+.trophy-item:hover img,
+.trophy-item:focus img {
+    transform: translateY(-18px) scale(1.13);
+    box-shadow: 0 8px 24px rgba(231,76,60,0.18);
+}
+
+.trophy-item span {
+    text-align: center;
+    font-size: 0.98rem;
+    color: #2c5364;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.trophy-item small {
+    font-size: 0.85em;
+    color: #888;
+    font-weight: 400;
+}
+
+@media (max-width: 600px) {
+    .trophy-cabinet {
+        gap: 18px 10px;
+    }
+    .trophy-item {
+        width: 80px;
+        padding: 10px 2px 8px 2px;
+    }
+    .trophy-item img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Achievements Section */
+.achievements-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin: 32px 0 24px 0;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Refreshment Section */
+.refreshment-section {
+    margin: 48px auto 60px auto;
+    text-align: center;
+}
+
+.refreshment-heading {
+    font-size: 1.6rem;
+    color: #0f2027;
+    margin-bottom: 18px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.penalty-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.goal {
+    position: relative;
+    width: 320px;
+    height: 120px;
+    background: linear-gradient(to bottom, #e0e0e0 80%, #b2bec3 100%);
+    border: 4px solid #2c5364;
+    border-radius: 12px 12px 24px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(44,83,100,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.goalkeeper {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    background: url('https://cdn-icons-png.flaticon.com/512/861/861512.png') center/contain no-repeat;
+    transform: translateX(-50%);
+    transition: left 0.4s cubic-bezier(.4,2,.6,1);
+    z-index: 2;
+}
+
+.shoot-btn {
+    margin: 0 8px;
+    padding: 10px 22px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(44,83,100,0.10);
+}
+
+.shoot-btn:hover, .shoot-btn:focus {
+    background: #c0392b;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.result {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c5364;
+    min-height: 32px;
+    margin-top: 8px;
+}
+
+/* Add to your portfolio.css */
+.fifa-silver {
+  background: linear-gradient(90deg, #bfc1c2 0%, #e6e7e8 100%);
+}
+.fifa-gold {
+  background: linear-gradient(90deg, #f7d774 0%, #fff3b0 100%);
+}
+.fifa-rare-gold {
+  background: linear-gradient(90deg, #f7d774 0%, #ffe066 100%);
+  box-shadow: 0 0 24px 4px #f7d77444;
+}
+.fifa-special {
+  background: linear-gradient(90deg, #5a5aff 0%, #b8b8ff 100%);
+}
+.fifa-bronze {
+  background: linear-gradient(90deg, #a97142 0%, #e0c3a3 100%);
+}
+.fifa-blue {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+}
+
+/* Override the default hero-eden background when a card class is present */
+.hero-eden.fifa-silver {
+  background: linear-gradient(90deg, #bfc1c2 0%, #e6e7e8 100%) !important;
+  color: #222;
+}
+.hero-eden.fifa-gold,
+.hero-eden.fifa-rare-gold {
+  background: linear-gradient(90deg, #f7d774 0%, #fff3b0 100%) !important;
+  color: #222;
+}
+.hero-eden.fifa-bronze {
+  background: linear-gradient(90deg, #a97142 0%, #e0c3a3 100%) !important;
+  color: #222;
+}
+.hero-eden.fifa-blue {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%) !important;
+  color: #fff;
+}
+.hero-eden.fifa-special {
+  background: linear-gradient(90deg, #5a5aff 0%, #b8b8ff 100%) !important;
+  color: #fff;
+}
+/* Add this to your portfolio.css */
+.hero-eden.fifa-special .hero-eden-text h2,
+.hero-eden.fifa-special .hero-eden-text p {
+  color: #222 !important;
+}

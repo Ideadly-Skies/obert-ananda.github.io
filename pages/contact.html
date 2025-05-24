@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Contact Us Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../styles/contact.css">
+</head>
+<body>
+  <section>
+    
+    <!-- Navbar -->
+    <div class="menu-wrapper">
+        <nav>
+        <img src="https://www.vectorkhazana.com/assets/images/products/Chelsea_Fc_Black.png" alt="Tesla Logo" class="tesla-logo" />
+        <a href="../index.html">Home</a>
+        <ul>
+            <li><a href="./portfolio.html">Portfolio/Work</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </div>
+
+    <div class="section-header">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>If you wish to contact Eden Hazard for professional inquiries, interviews, or collaborations, please reach out through his official representatives or management team. For media requests or sponsorship opportunities, visit his official website or connect via verified social media channels. Kindly note that personal messages may not receive a response due to high volume.</p>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Address</h4>
+              <p>4671 Sugar Camp Road,<br/> Owatonna, Minnesota, <br/>55060</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Phone</h4>
+              <p>561-456-2321</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Email</h4>
+             <p>example@email.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form action="" id="contact-form">
+            <h2>Send Message</h2>
+            <div class="input-box">
+              <input type="text" required="true" placeholder=" " name="">
+              <span>Full Name</span>
+            </div>
+            
+            <div class="input-box">
+              <input type="email" required="true" placeholder=" " name="">
+              <span>Email</span>
+            </div>
+            
+            <div class="input-box">
+              <textarea required="true" placeholder=" " name=""></textarea>
+              <span>Type your Message...</span>
+            </div>
+            
+            <div class="input-box">
+              <input type="submit" value="Send" name="">
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="tesla-footer">
+    <div class="footer-content">
+        <ul class="footer-links">
+            <li></li>
+            <li></li>
+        </ul>
+        <span class="footer-copyright">
+            &copy; <span id="year"></span> Obie
+        </span>
+    </div>
+  </footer>
+  <script>
+     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

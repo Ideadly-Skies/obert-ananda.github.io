@@ -1,0 +1,604 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+/* Variables (remove SCSS syntax, use CSS custom properties if needed) */
+/* :root {
+  --font-sans: "Open Sans", sans-serif;
+  --font-title: 'Saira', sans-serif;
+  --black: #34435e;
+  --white: #ffffff;
+} */
+
+/* Use font-family directly in CSS, not variables */
+body {
+  font-family: "Open Sans", "Montserrat", Arial, sans-serif;
+}
+
+/* Timeline styles */
+.timeline {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 56px;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.timeline::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.timeline {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.timeline::after {
+  height: 6000px;
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #00203fff;
+  top: 0;
+  bottom: 0;
+  left: 35px;
+  margin-top: 135px;
+}
+
+.container {
+  text-align: left;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #00203fff;
+  border: 4px solid grey;
+  top: 45px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::after,
+.right::after {
+  left: 15px;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  width: 70%;
+  padding: 20px 30px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 6px;
+}
+
+#timeline-header {
+  margin-top: 70px;
+  color: #000;
+  font-family: 'Saira', 'Montserrat', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  font-size: 2.6em;
+}
+
+.main-content {
+  height: 100vh;
+  width: 70%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #00203fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio {
+  margin-left: 50px;
+  height: 90%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+#image {
+  max-height: 325px;
+  max-width: 325px;
+  border-radius: 50%;
+  display: block;
+}
+
+#title {
+  margin-left: 20px;
+  margin-top: 80px;
+}
+
+h1 {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  color: #fff;
+}
+
+#tribute-info {
+  min-width: 50px;
+  max-width: 500px;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 80px;
+}
+
+#img-caption {
+  min-width: 50px;
+  max-width: 500px;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+#tribute-link {
+  display: block;
+  min-height: 50px;
+  min-width: 180px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  background: #e74c3c;
+  width: 50%;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  margin-left: 20px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+#tribute-link:hover,
+#tribute-link:focus {
+  box-shadow: 0 0 0 4px #e74c3c44, 0 4px 16px rgba(44,83,100,0.12);
+  outline: none;
+}
+
+.centered-element {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+}
+
+/* Responsive main content for small screens */
+.main-content-small {
+  height: 900px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  right: 0;
+  background-color: #00203fff;
+  z-index: 1;
+}
+
+.bio-small {
+  position: relative;
+  z-index: 2;
+}
+
+#image-small {
+  max-height: 325px;
+  max-width: 325px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#title-small {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.h1-small {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  color: #fff;
+}
+
+#tribute-info-small {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  min-width: 50px;
+  max-width: 500px;
+  font-size: 15px;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#img-caption-small {
+  min-width: 50px;
+  max-width: 500px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+#tribute-link-small {
+  display: block;
+  min-height: 50px;
+  min-width: 180px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  background: #e74c3c;
+  width: 50%;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+#tribute-link-small:hover,
+#tribute-link-small:focus {
+  box-shadow: 0 0 0 4px #e74c3c44, 0 4px 16px rgba(44,83,100,0.12);
+  outline: none;
+}
+
+.timeline-small {
+  width: 100%;
+  margin-top: 900px;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+  text-align: center;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 50px;
+}
+
+.timeline-small::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #00203fff;
+  top: 0;
+  bottom: 0;
+  left: 35px;
+  margin-top: 135px;
+}
+
+#timeline-header-small {
+  margin-top: 70px;
+  color: #000;
+  font-family: 'Saira', 'Montserrat', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  font-size: 2.6em;
+}
+
+#small {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  #small {
+    display: inline-block;
+  }
+  #big {
+    display: none;
+  }
+}
+
+/* Navbar Styles */
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 1000;
+  padding: 0;
+}
+
+.menu-wrapper nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tesla-logo {
+  height: 36px;
+  margin-left: 24px;
+  margin-right: 32px;
+  filter: brightness(0) invert(1);
+}
+
+.menu-wrapper ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 32px;
+  height: 56px;
+}
+
+.menu-wrapper li {
+  margin-left: 32px;
+}
+
+.menu-wrapper li:first-child {
+  margin-left: 0;
+}
+
+.menu-wrapper a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-wrapper a:hover,
+.menu-wrapper a:focus {
+  background: #e74c3c;
+  color: #fff;
+  outline: none;
+}
+
+@media (max-width: 734px) {
+  .menu-wrapper {
+    display: none;
+  }
+}
+
+.tesla-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  border-top: 1px solid #222;
+  z-index: 1001;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-right: 32px;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  background: #e74c3c;
+  color: #fff;
+  outline: none;
+}
+
+@media (max-width: 734px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+  .footer-links {
+    margin-bottom: 10px;
+  }
+}
+
+/* Prevent unwanted vertical scroll */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Bio fade animation */
+.bio-fade {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.7s;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bio-fade.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* Bio row layouts */
+.bio-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: 40px 32px;
+  background: transparent;
+  border-radius: 18px;
+}
+.bio-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Bio image and info */
+.bio-img {
+  text-align: center;
+}
+.bio-title {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.img-caption {
+  font-size: 1.1rem;
+  margin-top: 18px;
+  color: #fff;
+}
+.bio-info {
+  max-width: 400px;
+}
+.bio-link {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 28px;
+  background: #e74c3c;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+.bio-link:hover, .bio-link:focus {
+  box-shadow: 0 0 0 4px #e74c3c44, 0 4px 16px rgba(44,83,100,0.12);
+  background: #fff;
+  color: #e74c3c;
+  outline: none;
+}
+
+/* Bio container and content to match navbar style */
+.bio-row,
+.bio-row-reverse {
+  background: #111 !important;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  color: #fff;
+}
+
+/* Bio titles and captions in white */
+.bio-title,
+.img-caption,
+.bio-info {
+  color: #fff !important;
+}
+
+/* Bio link/button to match navbar style */
+.bio-link {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 28px;
+  background: #000;
+  color: #fff;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s, border 0.2s;
+}
+
+.bio-link:hover,
+.bio-link:focus {
+  background: #fff;
+  color: #000;
+  border: 2px solid #e74c3c;
+  box-shadow: 0 0 0 4px #e74c3c44, 0 4px 16px rgba(44,83,100,0.12);
+  outline: none;
+}
+
+#bio2 .bio-link,
+#bio2 .bio-link:hover,
+#bio2 .bio-link:focus {
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+#bio4 .bio-title {
+  color: #fff !important;
+}
+
+#big, #small, .main-content, .main-content-small, .timeline, .timeline-small {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  box-sizing: border-box;
+}
