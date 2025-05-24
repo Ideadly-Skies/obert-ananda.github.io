@@ -642,3 +642,8 @@ header p {
   background: linear-gradient(90deg, #5a5aff 0%, #b8b8ff 100%) !important;
   color: #fff;
 }
+/* Add this to your portfolio.css */
+.hero-eden.fifa-special .hero-eden-text h2,
+.hero-eden.fifa-special .hero-eden-text p {
+  color: #222 !important;
+}
