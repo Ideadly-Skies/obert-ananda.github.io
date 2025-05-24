@@ -343,9 +343,9 @@ header p {
 
 /* Recommendation Carousel */
 .recommendation-carousel {
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  margin-left: 0;
+  transform: none;
   padding: 48px 0 32px 0;
   display: flex;
   flex-direction: column;
